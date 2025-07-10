@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Flores para Mili 🌸</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #1a1a1a;
+      font-family: 'Comic Sans MS', cursive;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    h1 {
+      color: #ffb6c1;
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .garden {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .flower {
+      width: 30px;
+      height: 30px;
+      margin: 10px;
+      border-radius: 50%;
+      background-color: #ff69b4;
+      animation: float 5s infinite ease-in-out;
+      position: relative;
+    }
+
+    .flower::before, .flower::after {
+      content: '';
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      background-color: inherit;
+      border-radius: 50%;
+    }
+
+    .flower::before {
+      top: -15px;
+      left: 0;
+    }
+
+    .flower::after {
+      left: -15px;
+      top: 0;
+    }
+
+    .stem {
+      width: 4px;
+      height: 40px;
+      background-color: #2ecc71;
+      margin: 0 auto;
+      margin-top: -10px;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+      100% { transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <h1>Estas flores te durarán más que las originales,<br> las otras se marchitan, jajaja 💐</h1>
+  
+  <div class="garden">
+    <!-- Puedes duplicar estas flores para que se vean más -->
+    <div>
+      <div class="flower" style="background-color:#ff69b4;"></div>
+      <div class="stem"></div>
+    </div>
+    <div>
+      <div class="flower" style="background-color:#ffa07a;"></div>
+      <div class="stem"></div>
+    </div>
+    <div>
+      <div class="flower" style="background-color:#f0e68c;"></div>
+      <div class="stem"></div>
+    </div>
+    <div>
+      <div class="flower" style="background-color:#98fb98;"></div>
+      <div class="stem"></div>
+    </div>
+    <div>
+      <div class="flower" style="background-color:#87cefa;"></div>
+      <div class="stem"></div>
+    </div>
+    <!-- Agrega más flores si deseas -->
+  </div>
+</body>
+</html>
